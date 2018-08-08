@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Blood Factory</title>
+<link rel="stylesheet" type="text/css" href="css/idle.css">
+<script src="js/idle.js"></script>
+</head>
+
+<body>
+	<div id="page">
+		<div id="header">
+			<div id="game-title">
+				Blood Factory
+			</div>
+		</div>
+
+	<div id="content">
+		<div id="stats" class="block">
+			<div class="label">Blood Cells:</div>
+			<div id="money" class="label">0</div>
+		</div>
+
+		<div id="clickables" class="block">
+			<input type="button" value="Extract Blood from Yourself" onclick="GatherMoney();">
+		</div>
+
+		<div id="buildings" class="block">
+			<div id="Building1">
+				<input type="button" value="Bone" onclick="Build(0);">
+				<div>
+					<div class="label">Cost:</div>
+					<div id="Building1Cost" class="label">10</div>
+				</div>
+				<div>
+					<div class="label">Per Sec:</div>
+					<div id="Building1PerSec" class="label">1</div>
+				</div>
+				<div>
+					<div class="label">Quantity:</div>
+					<div id="Building1Qty" class="label">0</div>
+				</div>
+			</div>
+
+			<div id="Building2">
+				<input type="button" value="Skeleton" onclick="Build(1);">
+				<div>
+					<div class="label">Cost:</div>
+					<div id="Building2Cost" class="label">100</div>
+				</div>
+				<div>
+					<div class="label">Per Sec:</div>
+					<div id="Building2PerSec" class="label">10</div>
+				</div>
+				<div>
+					<div class="label">Quantity:</div>
+					<div id="Building2Qty" class="label">0</div>
+				</div>
+			</div>
+
+			<div id="Building3">
+				<input type="button" value="Human Child" onclick="Build(2);">
+				<div>
+					<div class="label">Cost:</div>
+					<div id="Building3Cost" class="label">1000</div>
+				</div>
+				<div>
+					<div class="label">Per Sec:</div>
+					<div id="Building3PerSec" class="label">100</div>
+				</div>
+				<div>
+					<div class="label">Quantity:</div>
+					<div id="Building3Qty" class="label">0</div>
+				</div>
+			</div>
+
+			<div id="Building4">
+				<input type="button" value="Adult" onclick="Build(3);">
+				<div>
+					<div class="label">Cost:</div>
+					<div id="Building4Cost" class="label">10000</div>
+				</div>
+				<div>
+					<div class="label">Per Sec:</div>
+					<div id="Building4PerSec" class="label">1000</div>
+				</div>
+				<div>
+					<div class="label">Quantity:</div>
+					<div id="Building4Qty" class="label">0</div>
+				</div>
+			</div>
+
+			<div id="Building5">
+				<input type="button" value="Village" onclick="Build(4);">
+				<div>
+					<div class="label">Cost:</div>
+					<div id="Building5Cost" class="label">100000</div>
+				</div>
+				<div>
+					<div class="label">Per Sec:</div>
+					<div id="Building5PerSec" class="label">10000</div>
+				</div>
+				<div>
+					<div class="label">Quantity:</div>
+					<div id="Building5Qty" class="label">0</div>
+				</div>
+			</div>
+
+			<div id="Building6">
+				<input type="button" value="Society" onclick="Build(5);">
+				<div>
+					<div class="label">Cost:</div>
+					<div id="Building6Cost" class="label">1000000</div>
+				</div>
+				<div>
+					<div class="label">Per Sec:</div>
+					<div id="Building6PerSec" class="label">100000</div>
+				</div>
+				<div>
+					<div class="label">Quantity:</div>
+					<div id="Building6Qty" class="label">0</div>
+				</div>
+			</div>
+
+			<div id="Building7">
+				<input type="button" value="Nation" onclick="Build(6);">
+				<div>
+					<div class="label">Cost:</div>
+					<div id="Building7Cost" class="label">10000000</div>
+				</div>
+				<div>
+					<div class="label">Per Sec:</div>
+					<div id="Building7PerSec" class="label">1000000</div>
+				</div>
+				<div>
+					<div class="label">Quantity:</div>
+					<div id="Building7Qty" class="label">0</div>
+				</div>
+			</div>
+
+			<div id="Buildin84">
+				<input type="button" value="Earthlings" onclick="Build(7);">
+				<div>
+					<div class="label">Cost:</div>
+					<div id="Building8Cost" class="label">100000000</div>
+				</div>
+				<div>
+					<div class="label">Per Sec:</div>
+					<div id="Building8PerSec" class="label">10000000</div>
+				</div>
+				<div>
+					<div class="label">Quantity:</div>
+					<div id="Building8Qty" class="label">0</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+		<div id="upgrades" class="block">
+			This is where our upgrades will go!
+		</div>
+
+		<div id="save/load" class="block">
+			Save and Load here!
+			<div type="button" value="Save Game" onclick="save();"></div>
+			<div type="button" value="Load Game" onclick="load();"></div>
+		</div>
+	</div>
+
+</body>
