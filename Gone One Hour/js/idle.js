@@ -4,17 +4,15 @@ var nrd = 0, nrdcost = 30, nrdadd = 1, addnrd = 1, upnrd = 0, upnrdcost = 100, m
 var gk = 0, gkcost = 90, gkadd = 3, addgk = 1, upgk = 0, upgkcost = 150, moargkcost = 75;
 var hkr = 0, hkrcost = 270, hkradd = 9, addhkr = 1, uphkr = 0, uphkrcost = 200, moarhkrcost = 100;
 var scnst = 0, scnstcost = 810, scnstadd = 27, addscnst = 1, upscnst = 0, upscnstcost = 250, moarscnstcost = 200;
-
 function Limit(){
 	clearInterval(Timer);
-	if (allunits >= meta){
+	if (alunts >= meta){
 		document.getElementById("finish").innerHTML = "Congrats! You beat the game!";
-	} else if (allunits < meta){
-		document.getElementById("finish").innerHTML = "Try again! You needed at least " + (meta - allunits) + " more! :/";
+	} else if (alunts < meta){
+		document.getElementById("finish").innerHTML = "Try again! You needed at least " + (meta - alunts) + " more!";
 	}
 	return tiem;
 }
-
 function Print(){
 	document.getElementById("nrd").innerHTML = nrd;
 	document.getElementById("money").innerHTML = "Money: $" + money;
@@ -50,22 +48,18 @@ function Print(){
 	document.getElementById("howmanygks").innerHTML = Math.floor(money/gkcost);
 	document.getElementById("howmanyhkrs").innerHTML = Math.floor(money/hkrcost);
 	document.getElementById("howmanyscnsts").innerHTML = Math.floor(money/scnstcost);
-	document.getElementById("alunts").innerHTML = "Units: " + allunits + "/1000000";
+	document.getElementById("alunts").innerHTML = "Units: " + alunts + "/1000000";
 }
-
 function Time(){
-	time++, allunits = nrd + gk + hkr + scnst;
+	time++, alunts = nrd + gk + hkr + scnst;
 	money = money + nrd*nrdadd + gk*gkadd + hkr*hkradd + scnst*scnstadd;
 	Print();
 	if (time >= 3600){
 		Limit();
-	} else if (allunits >= meta){
+	} else if (alunts >= meta){
 		Limit();
 	}
 }
-
-
-//nrdS
 function Buynrd(){
 	if (money >= nrdcost){
 		money = money - nrdcost;
@@ -92,9 +86,6 @@ function Moarnrds(){
 	}
 	Print();
 }
-
-
-//gkS
 function Buygk(){
 	if (money >= gkcost){
 		money = money - gkcost;
@@ -121,9 +112,6 @@ function Moargks(){
 	}
 	Print();
 }
-
-
-//hkrS
 function Buyhkr(){
 	if (money >= hkrcost){
 		money = money - hkrcost;
@@ -150,9 +138,6 @@ function Moarhkrs(){
 	}
 	Print();
 }
-
-
-//scnstS
 function Buyscnst(){
 	if (money >= scnstcost){
 		money = money - scnstcost;
